@@ -30,6 +30,7 @@
 		border: none;
 		color: black;
 		text-align: center;
+		text-decoration: none;
 		font-family:Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman",
 		Verdana, serif, Arial;	
 		font-size:13px;		
@@ -48,15 +49,14 @@
 		cursor: pointer;
 	}
 
-	.backbutton a{
+	.backbutton span{
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.5s;
-		text-decoration: none;
 	}
 
-	.backbutton a:after{
+	.backbutton span:after{
 		content: '\00ab'; /*glyphs*/
 		position: absolute;
 		opacity: 0;
@@ -65,11 +65,11 @@
 		transition: 0.5s;
 	}
 
-	.backbutton:hover a{
+	.backbutton:hover span{
 		padding-left: 25px; /*original: padding-right: 25px; */
 	}
 
-	.backbutton:hover a:after{
+	.backbutton:hover span:after{
 		opacity: 1;
 		left: 0; /* original: right: 0; */
 	}
@@ -92,7 +92,8 @@
  $U=$_GET['U']; 
  $userID = decrypt ($U);
 
- echo "<button class='backbutton' style='vertical-align:middle'><a href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'>Back</a></button>";
+ echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
+ //echo "<button class='backbutton' style='vertical-align:middle'><a href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'>Back</a></button>";
  echo "<h2>Upload Attachment</h2>";
 
 //Get the highest version
