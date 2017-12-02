@@ -79,7 +79,7 @@ include '../../inc/CROCSLogin.php';
 
 <h3>Report #1: Total Number of Customer Equipment</h3>
 <?php
-include '/../../inc/CROCSLogin.php';
+include '../../inc/CROCSLogin.php';
 /*
 $sql = "SELECT DISTINCT UPPER(CROCS_LOB) AS CROCS_LOB, COUNT(*) AS TOTAL FROM DATA_MAPPING_CROCS WHERE (UPPER(CROCS_LOB) <> 'WHOLESALE' AND CROCS_LOB IS NOT NULL) GROUP BY CROCS_LOB";
  
@@ -271,7 +271,7 @@ xyz;
 <h3>Report #2: Handover Activity Status According to Line of Business VS Product Name</h3>
 
 <?php
-include '/../../inc/CROCSLogin.php';
+include '../../inc/CROCSLogin.php';
     
  echo '<table border="1" align="center">
   <tr>
@@ -516,7 +516,7 @@ DEF;
 <h3>Report #3: Monthly Handover Statistics</h3>
 
 <?php
-include '/../../inc/CROCSLogin.php';
+include '../../inc/CROCSLogin.php';
 
 //Get Existing Year
     $sql1 = "SELECT DISTINCT EXTRACT(YEAR FROM CROCS_CDF_SIGN_OFF_DATE) AS CDF_YEAR FROM CROCS_HO_MONTHLY_REP";

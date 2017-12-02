@@ -70,7 +70,7 @@
 
  <!--Query database and fill in values into html form-->
  <?php 
-include '/../../inc/CROCSLogin.php'; 
+include '../../inc/CROCSLogin.php'; 
  //Get CE_Hostname  
  //$CE_Hostname=$_GET['CE_Hostname']; 
 
