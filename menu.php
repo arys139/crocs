@@ -150,7 +150,7 @@ body
     <div class="downloadcontent" style="float: left; width: 170px;">
     <!--Previous Download Contents--!>
     <a class="btn btn-primary" href="downloadCE.php?U=<?php echo $U; ?>" target="main" aria-label="Previous Download 
-    Contents" title="revious Download Contents">
+    Contents" title="Previous Download Contents">
 	<i class="fa fa-download fa-2x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i></a>
     &nbsp;Download Content &nbsp;&nbsp;
     </div>

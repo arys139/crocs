@@ -1469,10 +1469,10 @@ while (($rowAttach1 = oci_fetch_array($stidAttach1)) != false) {
     }
     
  //$attachment = $attachment.'</table>';
- if ($attachmentcnt1 > 4){
-    $uploadattachment1 = 'Maximum of 5 attachments reached. Please remove some of the attachments before uploading a new one.';}
+ if ($attachmentcnt1 > 2){
+    $uploadattachment1 = 'Maximum of 3 attachments reached. Please remove some of the attachments before uploading a new one.';}
  else{
-    $uploadattachment1 = '<a href="UploadAttachment1.php?CE_Hostname='.$CROCS_ORDER_SVC_ID.'&R=G&U='.$U.'">Upload attachments</a><br>Note : Supports file size up to 1MB each and maximum 5 attachments. ';}
+    $uploadattachment1 = '<a href="UploadAttachment1.php?CE_Hostname='.$CROCS_ORDER_SVC_ID.'&R=G&U='.$U.'">Upload attachments</a><br>Note : Supports file size up to 3MB each and maximum 3 attachments. ';}
 
 //Get Router Type
     $sql1 = "SELECT DISTINCT ROUTER_TYPE FROM DATA_MAPPING_ROUTER_TYPE_MODEL ORDER BY ROUTER_TYPE ASC";
