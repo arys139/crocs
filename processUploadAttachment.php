@@ -73,6 +73,7 @@
 		opacity: 1;
 		left: 0; /* original: right: 0; */
 	}
+	/* End Back Button */
 
 </style>
  
@@ -81,7 +82,7 @@
 
  <body> 
 
- <!--<h2>Upload Attachment</h2><p> --> 
+ <h2>Upload Attachment</h2>
 
  <!--Query database and fill in values into html form-->
  <?php 
@@ -95,9 +96,9 @@
  
  date_default_timezone_set('Asia/Kuala_Lumpur'); 
  
- echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
+ //echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
  //echo "<button class='backbutton' style='vertical-align:middle'><a href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'>Back</a></button>";
- echo "<h2>Upload Attachment</h2>";
+ //echo "<h2>Upload Attachment</h2>";
 
 
 //Get the highest version
@@ -130,7 +131,7 @@ $cleanfilename = preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $cleanfilename
 //$cleanfilename = str_replace(' ', '_', $cleanfilename);
 
 if ($_FILES["file"]["size"] < 262144) //kB
-  {
+{
 	switch($_FILES["file"]["error"])
 	{
 		case UPLOAD_ERR_OK:
@@ -181,13 +182,15 @@ if ($_FILES["file"]["size"] < 262144) //kB
         break;
 		
 	}
-  }
+}
 else
-  {
-	  echo '<div class="header">';
-	  echo "Please limit your file size up to 256kB only. Current size of ".$filename." is ".$_FILES["file"]["size"]." bytes.";
-	  echo '</div>';
-  }
+{
+	echo '<div class="header">';
+	echo "Please limit your file size up to 256kB only. Current size of ".$filename." is ".$_FILES["file"]["size"]." bytes.";
+	echo '</div>';
+}
+echo "<br>";
+echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
 
  ?> 
 

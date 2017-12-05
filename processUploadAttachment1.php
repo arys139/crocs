@@ -73,6 +73,7 @@
 		opacity: 1;
 		left: 0; /* original: right: 0; */
 	}
+	/* End Back Button */
 
 </style>
  <title>Upload Attachment</title> 
@@ -80,7 +81,7 @@
 
  <body> 
 
- <!-- <h2>Upload Attachment</h2><p> -->
+ <h2>Upload Attachment</h2>
 
  <!--Query database and fill in values into html form-->
  <?php 
@@ -92,9 +93,9 @@
  $U=$_GET['U']; 
  $userID = decrypt ($U);
 
- echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
+ //echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
  //echo "<button class='backbutton' style='vertical-align:middle'><a href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'>Back</a></button>";
- echo "<h2>Upload Attachment</h2>";
+ //echo "<h2>Upload Attachment</h2>";
 
 //Get the highest version
 $sql = "SELECT MAX(CROCS_FILE_VERSION) AS MAX_VERSION FROM DATA_MAPPING_CROCS_ATTACHMENT WHERE CROCS_LV_NUMBER = '".$CROCS_ORDER_SVC_ID."'";
@@ -119,7 +120,7 @@ $cleanfilename = preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $cleanfilename
 //$cleanfilename = str_replace(' ', '_', $cleanfilename);
 //if ($_FILES["file"]["size"] < 32769)
 if ($_FILES["file"]["size"] < 3000000) //1000000B = 1M
-  {
+{
 	switch($_FILES["file"]["error"])
 	{
 		case UPLOAD_ERR_OK:
@@ -164,18 +165,17 @@ if ($_FILES["file"]["size"] < 3000000) //1000000B = 1M
         break;
 		default: 
 			echo "Return Code " . $_FILES["file"]["error"] . ": Unknown upload error" . "<br>";			
-        break;
-		
+        break;	
 	}
-  }
+}
 else
-  {
-	  echo '<div class="header">';
-      echo "Please limit your file size up to 3MB only. Current size of ".$filename." is ".$_FILES["file"]["size"]." bytes.";
-	  echo '</div>';
-  }
-
-  //echo "<a class='button' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'>Back</a>";
+{
+	echo '<div class="header">';
+    echo "Please limit your file size up to 3MB only. Current size of ".$filename." is ".$_FILES["file"]["size"]." bytes.";
+	echo '</div>';
+}
+	echo "<br>";
+	echo "<a class='backbutton' href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U."'><span>Back</span></a>";
   
 
  ?> 

@@ -207,7 +207,7 @@ body
 			<!--List CE For Update/Download--!> 		
 			<a href="listCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="List CE For 
 			Update/Download" title="List CE For Update/Download">
-			<i class="fa fa-search fa-2x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+			<i class="fa fa-search fa-2x" style="vertical-align: middle;color:#376dbf;" aria-hidden="true"></i>
 			<span>Search CE</span>
 			</a>   
 		</div>
@@ -216,7 +216,7 @@ body
 			<!--Previous Download Contents--!>
 			<a href="downloadCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="Previous Download 
 			Contents" title="Previous Download Contents">
-			<i class="fa fa-download fa-2x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+			<i class="fa fa-download fa-2x" style="vertical-align: middle;color:#376dbf;" aria-hidden="true"></i>
 			<span>Download Content</span>
 			</a>
         </div>
@@ -225,7 +225,7 @@ body
 			<!--Bulk Update (Excel File)--!>
 			<a href="BulkUpdate.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="Bulk Update (Excel 
 			File)" title="Bulk Update (Excel File)">
-			<i class="fa fa-pencil-square-o fa-2x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+			<i class="fa fa-pencil-square-o fa-2x" style="vertical-align: middle;color:#376dbf;" aria-hidden="true"></i>
 			<span>Bulk Update</span>
 			</a>
         </div>
@@ -234,7 +234,7 @@ body
 			<!--CE Summary--!>
 			<a href="CESummary.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="CE Summary" 
 			title="CE Summary">
-			<i class="fa fa-list-alt fa-2x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+			<i class="fa fa-list-alt fa-2x" style="vertical-align: middle;color:#376dbf;" aria-hidden="true"></i>
 			<span>CE Summary</span>
 			</a>
         </div>
