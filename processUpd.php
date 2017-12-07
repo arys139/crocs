@@ -102,7 +102,9 @@
                }
             else
 			{
-				echo "<script type='text/javascript'>alert('Information successfully updated!')</script>";            
+				echo "<script type='text/javascript'>alert('Information successfully updated!')
+				window.location.href='UpdCE.php?CE_Hostname=".$CROCS_ORDER_SVC_ID."&R=U&U=".$U." ';
+				</script>";          
             }
      }
     else {
@@ -111,6 +113,6 @@
 
  }
  
- include 'ListCE.php'; 
+ //include 'ListCE.php'; 
 
  ?> 
