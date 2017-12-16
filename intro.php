@@ -44,7 +44,7 @@ echo '</div>';
 <head>
 <title> CRoCS </title>
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/fontawesome-all.css">
 
 <style type="text/css">
 	.welcomemessage
@@ -111,12 +111,12 @@ echo '</div>';
 
 <div class="container1" style="margin:0 auto;margin-top:50; width:50%" align="center";>
     <div class="contentleft" style="width:25%; float:left">
-    <i class="fa fa-cog fa-spin fa-5x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+    <i class="fas fa-cog fa-spin fa-5x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
     <br>&nbsp;To capture the latest CE configuration prior to handover, retain resource order and CR activity. 
     &nbsp;&nbsp;
     </div>
     <div class="contentright" style="width:25%; float:right">
-    <i class="fa fa-pencil-square-o fa-5x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
+    <i class="fas fa-keyboard fa-5x" style="vertical-align: middle;color:#0066ff;" aria-hidden="true"></i>
     <br>&nbsp;To input the latest preventive maintenance executed date for each managed CE. 
     &nbsp;&nbsp;
     </div>
