@@ -4,6 +4,8 @@ include '../../inc/CROCSLogin.php';
 
 include 'inc_fn_userid_enc.php';
 
+date_default_timezone_set('Asia/Kuala_Lumpur');
+
 // Inialize session
 session_start();
 
@@ -123,6 +125,5 @@ echo '</div>';
 </div>
 
 <footer></footer>
-
 </body>
 </html>

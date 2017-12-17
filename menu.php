@@ -55,10 +55,11 @@ body
 	text-align:left;
 	/*font-weight:bold;*/
 }
+
 .divclass
 {
 	font-family: Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
-	Verdana, serif, Arial;
+	Verdana, serif, Arial, Helvetica;
 	font-size:12px;
 }	
 
@@ -154,7 +155,6 @@ body
 	margin-top:5px;
 }
 
-}
 </style>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -274,7 +274,7 @@ body
         </a>
         <br>
       </div>
-        
+      
       <div class="divright" style="float: right; font-align: middle">
     		<i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
     		<span style="color:#06ce25"><?php echo $name; ?></span> 
