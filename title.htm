@@ -2,56 +2,77 @@
 <html>
 <head>
 <style>
-body{
+body {
 	background-color:#f9a304;
 }
 
-#badge{
+#badge {
 	float:left;
 }
 
-#badge img{
+#badge img {
   width:100px;
   height:45px;
   position:absolute;
   left:15px;
-  bottom:15px
+  margin: 0;
 }
 
-#crocstitle{
+#crocstitle {
 	float:left;
 }
 
-#crocstitle img{
+#crocstitle img {
   height:36px;
   position:absolute;
   left:135px;
-  bottom:11px
+  margin: 15px;
 }
 
-@font-face{
+@font-face {
   font-family:clock;
   src:url(fonts/digital-7.ttf);
 }
 
-#clock{
-  font-size:1em;
+.clockdate-wrapper {
+  padding:15px;
+  max-width:85px;
+  width:100%;
+  text-align:center;
+  border-radius:5px;
   float:right;
-  right:10px;
-  color:black;
-  position:absolute;
-  bottom:10px;
+  right:-5px;
+}
+
+#clock{
   font-family:clock;
+  font-size:1.3em;
+  text-shadow:0px 0px 0px #2b2a2a;
+}
+
+#clock span {
+  text-shadow:0px 0px 0px #2b2a2a;
+  font-size:8px;
+  position:relative;
+  top:-9px;
+  left:-1px;
+  letter-spacing:1px;
+}
+
+#date {
+  letter-spacing:1px;
+  font-size:0.5em;
+  font-family:arial,sans-serif;
 }
 
 </style>
-
+<link rel="stylesheet" href="css/fontawesome-all.css">
 <!-- Live clock from file in jquery/liveclock.js -->
 <script type="text/javascript" src="jquery/liveclock.js"></script>
 
 </head>
 <!-- To load live clock -->
-<body onload="updateClock(); setInterval('updateClock()', 1000 )"> 
+<body onload="startTime()"> 
 <div class="title">
   <div id="badge">
     <img alt="TM" src="images/tm.png"/>
@@ -59,10 +80,12 @@ body{
   <div id="crocstitle">
     <img alt="CRoCS" src="images/title-CRoCS.png"/>
   </div>
-  <div id="clock">
-    &nbsp;
+  <div id="clockdate">
+    <div class="clockdate-wrapper">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
   </div>
 </div>
-  
 </body>
 </html>

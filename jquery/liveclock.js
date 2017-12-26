@@ -1,27 +1,31 @@
-function updateClock ( )
-{
-  var currentTime = new Date ( );
-
-  var currentHours = currentTime.getHours ( );
-  var currentMinutes = currentTime.getMinutes ( );
-  var currentSeconds = currentTime.getSeconds ( );
-
-  // Pad the minutes and seconds with leading zeros, if required
-  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-
-  // Choose either "AM" or "PM" as appropriate
-  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-
-  // Convert the hours component to 12-hour format if needed
-  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-
-  // Convert an hours component of "0" to "12"
-  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-
-  // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-  // Update the time display
-  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
 }
