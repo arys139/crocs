@@ -124,9 +124,8 @@ else {
 	{
 		font-family:Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
 		Verdana, serif, Arial;
-		font-size:11px;
+		font-size:11px; 
 	}
-	
 	
 	/*
 	table

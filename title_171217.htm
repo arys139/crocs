@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-color:#f9a304;
+}
+
+#badge{
+	float:left;
+}
+
+#badge img{
+  width:100px;
+  height:45px;
+  position:absolute;
+  left:15px;
+  margin: 0;
+}
+
+#crocstitle{
+	float:left;
+}
+
+#crocstitle img{
+  height:36px;
+  position:absolute;
+  left:135px;
+  margin: 15px;
+}
+
+@font-face{
+  font-family:clock;
+  src:url(fonts/digital-7.ttf);
+}
+
+#clock{
+  font-size:1em;
+  font-family:clock;
+  float:right;
+  color:black;
+  position:absolute;
+  right:10px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.clockicon{
+  float:right;
+  font-size:1.5em;
+  color:#2b2a2a;
+  position:absolute;
+  right:85px;
+  margin-top: 15px;
+  padding-top: 12px;
+}
+
+</style>
+<link rel="stylesheet" href="css/fontawesome-all.css">
+<!-- Live clock from file in jquery/liveclock.js -->
+<script type="text/javascript" src="jquery/liveclock.js"></script>
+
+</head>
+<!-- To load live clock -->
+<body onload="updateClock(); setInterval('updateClock()', 1000 )"> 
+<div class="title">
+  <div id="badge">
+    <img alt="TM" src="images/tm.png"/>
+  </div>
+  <div id="crocstitle">
+    <img alt="CRoCS" src="images/title-CRoCS.png"/>
+  </div>
+  <div>
+  <div class="clockicon">
+  <i class="fas fa-clock" aria-hidden="true"></i>
+  </div>
+  <div id="clock">
+    &nbsp;
+  </div>
+</div>
+</body>
+</html>
