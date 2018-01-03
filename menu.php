@@ -73,17 +73,18 @@ body, html {
   overflow: hidden;
   font-family: Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
   Verdana, serif, Arial, Helvetica;
-  font-size: 12px;
+  font-size: 11.5px;
+  perspective: 300px; //to make 3d perspective. only in chrome
 }
 
 .menu li {
   float: left;
-  display: block;
 }
 
 .menu li a {
+  float: left;
   display: block;
-  color: white;
+  color: #ffffff;
   padding: 7px 16px;
   text-decoration: none;
 }
@@ -97,13 +98,13 @@ body, html {
 
 span .fa-icon {
   vertical-align: middle;
-
   padding: 0px 4px;
 }
 
 .menu li:hover {
   background-color: #111;
   border-bottom: 2px solid #2e7ef4;
+  transform: rotateY(0deg);
 }
 
 .menu li:hover .menu-content{
@@ -113,7 +114,11 @@ span .fa-icon {
 .menu li:hover .fa-search {
   transition: 0.9s;
   transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
+}
+
+.fa-search {
+  transition: 0.9s;
+  transform: rotateY(0deg);
 }
 
 .menu li:hover .fa-arrow-alt-circle-down {
@@ -122,16 +127,31 @@ span .fa-icon {
   -ms-transform: rotateY(180deg);
 }
 
+.fa-arrow-alt-circle-down {
+  transition: 0.9s;
+  transform: rotateY(0deg);
+}
+
 .menu li:hover .fa-edit {
   transition: 0.9s;
   transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
 }
 
+.fa-edit {
+  transition: 0.9s;
+  transform: rotateY(0deg);
+}
+
 .menu li:hover .fa-list-alt {
   transition: 0.9s;
   transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
+}
+
+.fa-list-alt {
+  transition: 0.9s;
+  transform: rotateY(0deg);
 }
 
 .menu li:hover .admin {
@@ -170,7 +190,7 @@ span .fa-icon {
       <a href="listCE.php?U=<?php echo $U; ?>" target="main" aria-label="List CE For Update/Download" title="List CE For Update/Download"> 
         <div class="menu-content">
           <span class="fa-icon"><i class="fas fa-search " aria-hidden="true"></i></span>
-          <span class="search" style="width: 80px">Search CE</span>
+          <span class="search">Search CE</span>
         </div>
       </a>
       </li>
@@ -202,7 +222,7 @@ span .fa-icon {
       <a href="logout.php" target="_top" aria-label="Logout" title="Logout">
         <div class="menu-content">
           <span class="fa-icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
-          <span class="logout">Logout</span>
+          <span class="logout">Logout <?php echo '[ '.strtolower($userID).' ]'; ?></span>
         </div>
       </a>
       </li>      
@@ -264,7 +284,7 @@ span .fa-icon {
       <a href="logout.php" target="_top" aria-label="Logout" title="Logout">
         <div class="menu-content">
           <span class="fa-icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
-          <span class="logout">Logout</span>
+          <span class="logout">Logout <?php echo '[ '.strtolower($userID).' ]'; ?></span>
         </div>
       </a>
       </li> 
@@ -312,7 +332,7 @@ span .fa-icon {
       <a href="logout.php" target="_top" aria-label="Logout" title="Logout">
         <div class="menu-content">
           <span class="fa-icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
-          <span class="logout">Logout</span>
+          <span class="logout">Logout <?php echo '[ '.strtolower($userID).' ]'; ?></span>
         </div>
       </a>
       </li>            
