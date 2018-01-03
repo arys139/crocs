@@ -86,8 +86,6 @@ body, html {
   color: white;
   padding: 7px 16px;
   text-decoration: none;
-
-
 }
 
 .menu-content {
@@ -116,22 +114,24 @@ span .fa-icon {
   transition: 0.9s;
   transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
-
 }
 
 .menu li:hover .fa-arrow-alt-circle-down {
   transition: 0.9s;
   transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .menu li:hover .fa-edit {
   transition: 0.9s;
   transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .menu li:hover .fa-list-alt {
   transition: 0.9s;
   transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .menu li:hover .admin {
@@ -143,11 +143,17 @@ span .fa-icon {
 }
 
 .menu li:hover .logout {
-  color: #ef0909;
+  color: #ff2b2b;
 }
 
 .menu li:hover .fa-sign-out-alt:before {
-  color: #ef0909;
+  color: #ff2b2b;
+}
+
+.divright
+{
+	font-size:10.5px;
+	margin-top:8px;
 }
 
 </style>
@@ -157,58 +163,55 @@ span .fa-icon {
 <body>
 
 <?php if (($role == 'Administrator') && ($access == 'NORMAL')) {?>
-<div class="divclass">
-
-    <div class="search" style="float: left; width: 110px;">
-      <!--List CE For Update/Download-->	
-      <a href="listCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="List CE For 
-      Update/Download" title="List CE For Update/Download">
-      <i class="far fa-search" style="vertical-align:middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menu">Search CE</span>
+<div class="container">
+  <nav class="content">   
+    <ul class="menu">  
+      <li>
+      <a href="listCE.php?U=<?php echo $U; ?>" target="main" aria-label="List CE For Update/Download" title="List CE For Update/Download"> 
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-search " aria-hidden="true"></i></span>
+          <span class="search" style="width: 80px">Search CE</span>
+        </div>
       </a>
-    </div>
- 
-    <div class="downloadcontent" style="float: left; width: 170px;">
-      <!--Previous Download Contents-->
-      <a href="downloadCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="Previous Download 
-      Contents" title="Previous Download Contents">
-      <i class="far fa-arrow-alt-circle-down" style="vertical-align:middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menu">Download Content</span>
+      </li>
+      <li>
+      <a href="downloadCE.php?U=<?php echo $U; ?>" target="main" aria-label="Previous Download Contents" title="Previous Download Contents">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-arrow-alt-circle-down" aria-hidden="true"></i></span>
+          <span class="downloadcontent">Download Content</span>
+        </div>
       </a>
-    </div>
-    
-    <div class="bulkupdate" style="float: left; width: 130px;">
-      <!--Bulk Update (Excel File)-->	
-      <a href="BulkUpdate.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="Bulk Update (Excel 
-      File)" title="Bulk Update (Excel File)">
-      <i class="fas fa-edit" style="vertical-align: middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menu">Bulk Update</span>
+      </li>
+      <li>
+      <a href="BulkUpdate.php?U=<?php echo $U; ?>" target="main" aria-label="Bulk Update (Excel File)" title="Bulk Update (Excel File)">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-edit" aria-hidden="true"></i></span>
+          <span class="bulkupdate">Bulk Update</span>
+        </div>
       </a>
-    </div>
-    
-    <div class="cesummary" style="float: left; width: 130px;">
-      <!--CE Summary-->	
-      <a href="CESummary.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="CE Summary" 
-      title="CE Summary">
-      <i class="far fa-list-alt" style="vertical-align: middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menu">CE Summary</span>
+      </li>  
+      <li>
+      <a href="CESummary.php?U=<?php echo $U; ?>" target="main" aria-label="CE Summary" title="CE Summary">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="far fa-list-alt" aria-hidden="true"></i></span>
+          <span class="cesummary">CE Summary</span>
+        </div>
       </a>
-    </div>
-    
-    <div class="logout" style="float: left; width: 80px;">
-      <!--Logout-->
-      <a href="logout.php" class="btn btn-primary" target="_top" aria-label="Logout" title="Logout">
-      <i class="fas fa-sign-out-alt" style="vertical-align: middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menulogout">Logout</span>
+      </li>
+      <li>
+      <a href="logout.php" target="_top" aria-label="Logout" title="Logout">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
+          <span class="logout">Logout</span>
+        </div>
       </a>
-      <br>
-    </div>
-    
-    <div class="divright" style="float: right; font-align: middle">
-    	<i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
-    	<span style="color:#06ce25"><?php echo $name; ?></span>
-    </div>
-   
+      </li>      
+      <div class="divright" style="float: right; font-align: middle">
+        <i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
+        <span style="color:#06ce25"><?php echo $name; ?></span>
+      </div>
+    </ul>
+  </nav>
 </div>
     
 <?php } ?>
@@ -221,7 +224,7 @@ span .fa-icon {
       <a href="listCE.php?U=<?php echo $U; ?>" target="main" aria-label="List CE For Update/Download" title="List CE For Update/Download"> 
         <div class="menu-content">
           <span class="fa-icon"><i class="fas fa-search " aria-hidden="true"></i></span>
-          <span class="search" style="width: 80px">Search CE</span>
+          <span class="search">Search CE</span>
         </div>
       </a>
       </li>
@@ -264,7 +267,11 @@ span .fa-icon {
           <span class="logout">Logout</span>
         </div>
       </a>
-      </li>       
+      </li> 
+      <div class="divright" style="float: right; font-align: middle">
+    	<i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
+    	<span style="color:#06ce25"><?php echo $name; ?></span> 
+    </div>
     </ul>
   </nav>
 </div> 
@@ -272,50 +279,49 @@ span .fa-icon {
 <?php } ?>
 
 <?php if (($role == 'GUEST') && ($access == 'NORMAL')) {?>
-<div class="divclass">   
-
-	<div class="search" style="float: left; width: 110px;">
-		<!--List CE For Update/Download--> 
-		<a href="listCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="List CE For 
-		View/Download" title="List CE For Update/Download">
-		<i class="fas fa-search" style="vertical-align:middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-    <span class="menu">Search CE</span>
-		</a>  
-    </div>
-   
-   <?php /*?><div class="downloadcontent" style="float: left; width: 170px;">
-    <!--Previous Download Contents-->
-		<a href="downloadCE.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="Previous Download 
-		Contents" title="Previous Download Contents">
-		<i class="fas fa-arrow-alt-circle-down" style="vertical-align:middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-    <span class="menu">Download Content</span>
-		</a>
-    </div><?php */?>
-    
-    
-    <div class="cesummary" style="float: left; width: 130px;">
-      <!--CE Summary-->
-      <a href="CESummary.php?U=<?php echo $U; ?>" class="btn btn-primary" target="main" aria-label="CE Summary" 
-      title="CE Summary">
-      <i class="far fa-list-alt" style="vertical-align: middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menu">CE Summary</span>
+<div class="container">
+  <nav class="content">   
+    <ul class="menu">  
+      <li>
+      <a href="listCE.php?U=<?php echo $U; ?>" target="main" aria-label="List CE For Update/Download" title="List CE For Update/Download"> 
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-search " aria-hidden="true"></i></span>
+          <span class="search" style="width: 80px">Search CE</span>
+        </div>
       </a>
-    </div>
-    
-    <div class="logout" style="float: left; width: 80px;">
-      <!--Logout-->
-      <a href="logout.php" class="btn btn-primary" target="_top" aria-label="Logout" title="Logout">
-      <i class="fas fa-sign-out-alt" style="vertical-align: middle;color:#eaeced;font-size:1.7em" aria-hidden="true"></i>
-      <span class="menulogout">Logout</span>
+      </li>
+      <?php /*?>
+      <li>
+      <a href="downloadCE.php?U=<?php echo $U; ?>" target="main" aria-label="Previous Download Contents" title="Previous Download Contents">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-arrow-alt-circle-down" aria-hidden="true"></i></span>
+          <span class="downloadcontent">Download Content</span>
+        </div>
       </a>
-      <br>
-    </div>
-            
-    <div class="divright" style="float: right; font-align: middle">
-    	<i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
-    	<span style="color:#06ce25"><?php echo $name; ?></span> 
-    </div>
-
+      </li> 
+      <?php */?>
+      <li>
+      <a href="CESummary.php?U=<?php echo $U; ?>" target="main" aria-label="CE Summary" title="CE Summary">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="far fa-list-alt" aria-hidden="true"></i></span>
+          <span class="cesummary">CE Summary</span>
+        </div>
+      </a>
+      </li>
+      <li>
+      <a href="logout.php" target="_top" aria-label="Logout" title="Logout">
+        <div class="menu-content">
+          <span class="fa-icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
+          <span class="logout">Logout</span>
+        </div>
+      </a>
+      </li>            
+      <div class="divright" style="float: right; font-align: middle">
+        <i class="fas fa-user fa-lg" style="vertical-align: middle;color:#06ce25;" aria-hidden="true"></i>
+        <span style="color:#06ce25"><?php echo $name; ?></span> 
+      </div>
+    </ul>
+  </nav>
 </div>
     
 <?php } ?>
