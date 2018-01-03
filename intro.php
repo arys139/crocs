@@ -106,7 +106,8 @@ echo '</div>';
   background: -o-linear-gradient(left, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(left, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
   background: linear-gradient(left, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE5.5-7 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1);/* IE8 */
   -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -224,7 +225,7 @@ echo '</div>';
 
 <div class="container">
   <div class="header">
-  WELCOME TO CROCS
+  WELCOME
   </div>
   <div class="content">   
     <ul class="menu">
