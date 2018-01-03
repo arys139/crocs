@@ -55,13 +55,16 @@ h2{
 	font-size:13px;
   padding:0; margin:0;
 }
-	
+
 table{
-  font-family:Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
+	font-family:Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
 	Verdana, serif, Arial;
 	font-size:11px;
-  color:#FFFFFF;
-  margin: 15px 15px;
+	margin: 15px 15px;
+}
+
+.header {
+	background-color: #FFA500;
 }
 
 	
@@ -91,7 +94,7 @@ table{
 
   <form action="downloadAll.php" method="post"> 
   <table cellpadding="5" border ="1">
-  <tr bgcolor="#2b2a2a"><td>File Name</td><td>File Size (Kb)</td><td>Generated Date & Time</tr>
+  <tr bgcolor="#2b2a2a"><td class="header">File Name</td><td class="header">File Size (Kb)</td><td class="header">Generated Date & Time</tr>
   <?php
   date_default_timezone_set('Asia/Kuala_Lumpur');
 
