@@ -74,7 +74,7 @@ body, html {
   font-family: Tahoma, sans-serif, Cambria, Calibri, Helvetica-Light, Impact, "Segoe UI", "Times New Roman", 
   Verdana, serif, Arial, Helvetica;
   font-size: 11.5px;
-  perspective: 300px; //to make 3d perspective. only in chrome
+  //perspective: 300px; //to make 3d perspective. only in chrome
 }
 
 .menu li {

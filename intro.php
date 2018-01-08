@@ -11,29 +11,31 @@ session_start();
 
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: index.php');
+  header('Location: index.php');
 }
 else {
-   $userID = $_SESSION['username'];
-   $userID = strtoupper($userID);
-         
-   $sql = "SELECT USERNAME, ROLE FROM USERS WHERE USERID = '".$userID."'";
-      
-   $stid = oci_parse($cemdb, $sql);
+  $userID = $_SESSION['username'];
+  $userID = strtoupper($userID);
+       
+  $sql = "SELECT USERNAME, ROLE FROM USERS WHERE USERID = '".$userID."'";
+    
+  $stid = oci_parse($cemdb, $sql);
    
-   if(!$stid) {
+  if(!$stid) {
     echo "An error occurred in parsing the sql string.\n";
-    exit;} 
-   else{
+    exit;
+  } 
+  else {
     oci_define_by_name($stid, 'USERNAME', $name);
     oci_define_by_name($stid, 'ROLE', $role);
-    oci_execute($stid);}
-    
-   if ($row = !oci_fetch($stid)){
-        $name = "GUEST";
-        $role = "GUEST";
-        }
+    oci_execute($stid);
   }
+
+  if ($row = !oci_fetch($stid)) {
+    $name = "GUEST";
+    $role = "GUEST";
+  }
+}
 
 /* 
 echo '<div class="welcomemessage" style="margin:0 auto;margin-top:50;" align="center">';
